@@ -20,7 +20,7 @@ model = models.resnet18(pretrained=True)
 model.fc = nn.Linear(in_features=512, out_features=11, bias=True)
 
 # Load the pre-trained weights
-model.load_state_dict(torch.load('/Users/idaklimanova/ds_bootcamp/ds-phase-2/nn_project/streamlit/resnet18_model.pt', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('resnet18_model.pt', map_location=torch.device('cpu')))
 model.eval()
 
 # Define the transformation to be applied to the input image
